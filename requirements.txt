@@ -1,0 +1,3 @@
+requests      # For making API calls
+matplotlib    # For visualizations (optional)
+pandas        # For data manipulation (optional but useful)
