@@ -1,4 +1,3 @@
-def check_alerts(data):
-    temperature = data['temperature']
-    if temperature > 35:
-        print("Alert: High temperature!")
+def check_temperature_alert(current_temp, threshold):
+    if current_temp > threshold:
+        print(f"Alert! Temperature exceeded {threshold}°C: Current Temp: {current_temp}°C")

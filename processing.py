@@ -1,8 +1,12 @@
 def process_weather_data(data):
-    # Extract relevant information from the API response
-    temperature = data['main']['temp']
-    condition = data['weather'][0]['description']
-    return {
-        'temperature': temperature,
-        'condition': condition
-    }
+    if data:
+        main = data['main']
+        weather = data['weather'][0]
+
+        return {
+            'temp': main['temp'],
+            'feels_like': main['feels_like'],
+            'condition': weather['main'],
+            'timestamp': data['dt']
+        }
+    return None
